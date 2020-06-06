@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header';
-import '../assets/style.scss';
+import App from './routes/App';
+import './assets/styles/style.scss';
 
-ReactDOM.render(<Header />, document.getElementById('container'));
+ReactDOM.render(<App />, document.getElementById('container'));

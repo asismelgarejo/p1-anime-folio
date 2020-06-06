@@ -1,0 +1,25 @@
+@import '../vars.scss';
+
+.footer{
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding: $padding-container;
+  background-color: $main-color;
+  color: $clear-color;
+  &__logo{
+    width: 100px;
+    margin: 0 5px;
+  }
+  &__description{
+    display: flex;
+    align-items: center;
+  }
+  p{
+    margin: 0;
+  }
+  a {
+    color: $clear-color;
+    text-decoration: none;
+  }
+}
