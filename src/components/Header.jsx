@@ -1,17 +1,13 @@
 import React from 'react';
 import '../assets/styles/components/header.scss';
-import logo from '../assets/static/main-logo.png';
 
 const Header = () => {
   return (
     <header className='header'>
       <div className='header__logo'>
         <span>
-          <img src={logo} alt='logo' />
-          <h1>-folio</h1>
-        </span>
-        <span>
-          <h4>by Asís Melgarejo</h4>
+          {/* <img src={logo} alt='logo' /> */}
+          <h1 className='logo'>AsKing-folio</h1>
         </span>
       </div>
       <nav className='menu is-active'>

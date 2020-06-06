@@ -6,8 +6,16 @@ $main-color: #453c2c;
 $second-color: invert($main-color);
 $clear-color: white;
 $background-color: #e9edef;
+$dark-color: black;
 
 $logo-font: 'Righteous', Arial;
 $main-font: 'Roboto Slab', Arial;
 
 $padding-container: 0 10px;
+
+$border-radius: 4px;
+
+/*MIXIN*/
+@mixin shadow($color){
+  box-shadow: 5px 5px 5px $color;
+}

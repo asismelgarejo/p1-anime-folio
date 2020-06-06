@@ -1,14 +1,14 @@
 import React from 'react';
 import deno from '../assets/static/deno.jpg';
-import '../assets/styles/components/galery.scss';
+import '../assets/styles/components/certification.scss';
 
-const Galery = () => {
+const Certification = () => {
   return (
-    <section className='galery' id='galeria'>
-      <h2>Galeria</h2>
-      <div className='galery__item'>
-        <div className='galery__item-detail'>
-          <h4>Hero</h4>
+    <section className='Certification' id='galeria'>
+      <h2>Certifications</h2>
+      <div className='certification__item'>
+        <div className='certification__item-detail'>
+          <h4>JavaScript</h4>
           <p>
             <small>
               <strong>Description:</strong>
@@ -16,11 +16,11 @@ const Galery = () => {
             Curabitur mauris libero, efficitur ut felis quis, bibendum tincidunt lectus. Donec vehicula, orci id facilisis aliquet, odio lectus cursus risus, tincidunt blandit nunc orci sed libero. Proin tristique placerat lorem, sed efficitur justo scelerisque vitae.
           </p>
         </div>
-        <img src={deno} alt='deno' width='500px' className='galery__item-image' />
+        <img src={deno} alt='deno' width='500px' className='certification__item-image' />
       </div>
     </section>
   );
 };
 
-export default Galery;
+export default Certification;
 

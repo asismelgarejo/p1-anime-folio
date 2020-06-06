@@ -1,10 +1,7 @@
 @import '../vars.scss';
 
-.galery{
+.certification{
   padding: $padding-container;
-  h2{
-    margin-bottom: 40px;
-  }
   &__item{
     display: flex;
     padding: $padding-container;
@@ -26,6 +23,6 @@
 
 .images{
 }
-.galery-details{
+.certification-details{
   width: 50%;
 }
