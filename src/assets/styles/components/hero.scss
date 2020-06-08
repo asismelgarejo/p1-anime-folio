@@ -1,16 +1,38 @@
 @import '../vars.scss';
 .hero{
   display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  height: 300px;
+  padding: $padding-container;
   justify-content: space-between;
   align-items: center;
-  height: 300px;
-  flex-wrap: wrap;
   background-color: $second-color;
+  @media screen and (max-width: $mobile-size){
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 100%;
+  }
   h1 {
     font-size: 40px;
-    padding-left: 10px;
+    @media screen and (max-width: $mobile-size){
+      position: absolute;
+      z-index: 2;
+      color: $clear-color;
+      padding: $padding-container;
+    }
   }
 }
 .hero img{
   object-fit: cover;
+  @media screen and (max-width: $mobile-size){
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}
+.container-hero{
+  background-color: $second-color;  
 }

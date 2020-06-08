@@ -15,7 +15,21 @@ $padding-container: 0 10px;
 
 $border-radius: 4px;
 
+$mobile-size: 320px;
+
 /*MIXIN*/
 @mixin shadow($color){
-  box-shadow: 5px 5px 5px $color;
+  box-shadow: 5px 5px 10px $color;
+}
+@mixin button(){
+  padding: 10px 20px;
+  display: block;
+  border: 1px solid $main-color;
+  border-radius: $border-radius;
+  color: $main-color;
+  cursor: pointer;
+}
+@mixin btn-hover(){
+  background-color: $main-color;
+  color: $clear-color;
 }

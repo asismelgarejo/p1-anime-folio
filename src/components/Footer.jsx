@@ -4,15 +4,16 @@ import '../assets/styles/components/footer.scss';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='footer__description left'>
-        <p>Web Development 2020</p>
-        <img src={logo} alt='logo' className='footer__logo' />
-      </div>
-      <div className='footer__description right'>
-        <a href='#'>@asismelgarejo</a>
-      </div>
-    </footer>
+    <div className="container-footer">
+      <footer className='footer'>
+        <div className='footer__description left'>
+          <p>AsKing © 2020</p>
+        </div>
+        <div className='footer__description right'>
+          <a href='#'>@asismelgarejo</a>
+        </div>
+      </footer>
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Certification from '../components/Certification';
 import Skill from '../components/Skill';
+import Contact from '../components/Contact';
 import '../assets/styles/components/footer.scss';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <Hero />
       <Certification />
       <Skill />
+      <Contact />
     </div>
   );
 };

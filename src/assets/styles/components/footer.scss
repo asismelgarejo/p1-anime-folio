@@ -1,5 +1,7 @@
 @import '../vars.scss';
-
+.container-footer{
+  background-color: $main-color;  
+}
 .footer{
   display: flex;
   height: 80px;
@@ -7,6 +9,14 @@
   padding: $padding-container;
   background-color: $main-color;
   color: $clear-color;
+  margin: 0 auto;
+  max-width: 1000px;
+  @media screen and (max-width: $mobile-size){
+    flex-direction: column;
+    height: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+  } 
   &__logo{
     width: 100px;
     margin: 0 5px;
