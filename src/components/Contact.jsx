@@ -7,7 +7,7 @@ import instagram from '../assets/static/instagram.png';
 
 const Contact = () => {
   return (
-    <div className="container-contact">
+    <div className='container-contact'>
       <section className='contact' id='contact'>
         <form action='' className='contact__email'>
           <h3>Contact the developer</h3>
@@ -16,16 +16,16 @@ const Contact = () => {
           <button type='button'>Enviar</button>
         </form>
         <div className='contact__social'>
-          <a href='https://twitter.com/asismelgarejo' className='contact__social-link twitter'>
+          <a target='_blank' href='https://twitter.com/asismelgarejo' className='contact__social-link twitter'>
             <img src={twitter} alt='twitter' />
           </a>
-          <a href="#" className='contact__social-link facebook'>
+          <a target='_blank' href='https://www.facebook.com/asis.melgarejolopez.1' className='contact__social-link facebook'>
             <img src={facebook} alt='facebook' />
           </a>
-          <a href='https://github.com/asismelgarejo' className='contact__social-link github'>
+          <a target='_blank' href='https://github.com/asismelgarejo' className='contact__social-link github'>
             <img src={github} alt='twitter' />
           </a>
-          <a href='https://www.instagram.com/asismelgarejo/' className='contact__social-link instagram'>
+          <a target='_blank' href='https://www.instagram.com/asismelgarejo/' className='contact__social-link instagram'>
             <img src={instagram} alt='instagram' />
           </a>
         </div>

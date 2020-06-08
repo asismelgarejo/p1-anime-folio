@@ -2,13 +2,16 @@
 
 .certification{
   padding: $padding-container;
+  margin: 0 auto;
+  max-width: 1000px;
   &__item{
     display: flex;
-    padding: $padding-container;
+    margin: 0 auto;
+    border: 2px solid $main-color;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px solid $main-color;
-    border-radius: 2px;
+    max-width: 500px;
+    // border-radius: 2px;
     margin-bottom: 15px;
     background-color: $background-color;
   }
