@@ -1,4 +1,7 @@
 @import '../vars.scss';
+.container-hero{
+  background-color: $second-color;  
+}
 .hero{
   display: flex;
   margin: 0 auto;
@@ -32,7 +35,4 @@
     width: 100%;
     z-index: 1;
   }
-}
-.container-hero{
-  background-color: $second-color;  
 }

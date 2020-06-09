@@ -1,15 +1,32 @@
 const path = require('path');
-const HtmlWbPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPLugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+
+require('dotenv').config();
+
+const isDev = (process.env.ENV === 'development');
+const entry = ['./src/frontend/index.js'];
+
+if (isDev) {
+  entry.push('webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000&reload=true');
+}
 
 module.exports = {
-  entry: './src/index.js',
+  entry,
+  mode: process.env.ENV,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'src/server/public'),
+    filename: isDev ? 'assets/app.js' : 'assets/app-[hash].js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
@@ -21,18 +38,10 @@ module.exports = {
         },
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
-      },
-      {
         test: /\.(s*)css$/,
         use: [
           {
-            loader: MiniCssExtractPLugin.loader,
+            loader: MiniCssExtractPlugin.loader,
           },
           'css-loader',
           'sass-loader',
@@ -47,19 +56,20 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader',
-      },
     ],
   },
   plugins: [
-    new HtmlWbPackPlugin({
-      template: './public/index.html',
-      filename: './index.html',
-    }),
-    new MiniCssExtractPLugin({
-      filename: 'assets/styles/[name].css',
+    isDev ? new webpack.HotModuleReplacementPlugin() :
+      () => { },
+    isDev ? () => { } :
+      new CompressionWebpackPlugin({
+        test: /\.js$|\.css$/,
+        filename: '[path].gz',
+      }),
+    isDev ? () => { } :
+      new ManifestPlugin(),
+    new MiniCssExtractPlugin({
+      filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
   ],
 };

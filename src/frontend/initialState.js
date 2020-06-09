@@ -1,12 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from './reducers';
-import App from './routes/App';
-import './assets/styles/style.scss';
-
-const initialState = {
+const initialStet = {
   'certifications': [
     {
       'id': 1,
@@ -46,15 +38,14 @@ const initialState = {
       'url': 'https://www.facebook.com/asis.melgarejolopez.1',
       'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non odio vitae turpis congue sodales. Integer at erat in purus varius elementum eget et purus.',
     },
+    {
+      'id': 4,
+      'skill': 'Node.js',
+      'cover': 'https://miro.medium.com/max/3200/1*xdo0UBpyszvD7-7EH4TkIA.png',
+      'url': 'https://www.facebook.com/asis.melgarejolopez.1',
+      'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non odio vitae turpis congue sodales. Integer at erat in purus varius elementum eget et purus.',
+    },
   ],
 };
 
-const store = createStore(reducer, initialState);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('container'),
-);
-
+export default initialStet;
